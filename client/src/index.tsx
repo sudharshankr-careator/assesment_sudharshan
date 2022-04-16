@@ -5,7 +5,7 @@ import {
   ApolloClient,
   ApolloProvider,
   createHttpLink,
-  InMemoryCache
+  InMemoryCache,
 } from '@apollo/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -16,7 +16,7 @@ import appStore from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
 const httpLink = createHttpLink({
-  uri: `${CONSTANTS.HOST}/graphql`,
+  uri: `${CONSTANTS.DATABASE_URL}/graphql`,
 });
 
 const client = new ApolloClient({
