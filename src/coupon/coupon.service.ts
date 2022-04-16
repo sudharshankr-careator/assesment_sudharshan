@@ -30,7 +30,6 @@ export class CouponService {
     });
   }
   async validateCoupon(couponcode: string, cartamt: number) {
-    console.log(couponcode, cartamt);
     const cou = await this.findOneCoupon(couponcode);
     if (!cou) {
       throw new HttpException(
@@ -53,8 +52,6 @@ export class CouponService {
         401,
       );
     }
-
-    console.log(cou);
 
     return cou;
   }
