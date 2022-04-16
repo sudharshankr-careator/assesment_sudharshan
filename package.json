@@ -6,10 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "install": "cd client && npm install",
+    "install": "npm install",
     "postinstall": "npm run prestart:prod",
     "prebuild": "rimraf dist",
-    "build": "nest build && cd client && npm run build",
+    "build": "nest build && ",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
