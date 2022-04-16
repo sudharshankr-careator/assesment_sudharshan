@@ -1,0 +1,50 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Coupon {
+  id: ID!
+  couponcode: String
+  couponvalue: Float
+  couponminvalue: Float
+  coupontype: String
+  startdate: DateTime
+  enddate: DateTime
+  createdat: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  allcoupon: [Coupon!]!
+  coupon(id: Int!): Coupon!
+  couponCode(cartamt: Float!, couponcode: String!): Coupon!
+}
+
+type Mutation {
+  createCoupon(createCouponInput: CreateCouponInput!): Coupon!
+  updateCoupon(updateCouponInput: UpdateCouponInput!): Coupon!
+  removeCoupon(id: Int!): Coupon!
+}
+
+input CreateCouponInput {
+  couponcode: String
+  couponvalue: Float
+  couponminvalue: Float
+  coupontype: String
+  startdate: DateTime
+  enddate: DateTime
+}
+
+input UpdateCouponInput {
+  couponcode: String
+  couponvalue: Float
+  couponminvalue: Float
+  coupontype: String
+  startdate: DateTime
+  enddate: DateTime
+  id: Int!
+}

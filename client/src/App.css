@@ -1,0 +1,14 @@
+@import "~antd/dist/antd.css";
+
+.button {
+	background-color: #1f93f2;
+
+	margin-left: 5rem;
+	margin-top: 3rem;
+}
+.button:hover {
+	background-color: #40a9ff;
+}
+.formfiled1 {
+	width: 15rem;
+}
